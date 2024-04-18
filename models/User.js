@@ -21,10 +21,10 @@ const UserSchema = new mongoose.Schema(
             default: false
         },
         skills: {
-            type: [String],   
-            required: false,  
-            default: []       
-        },        
+            type: Boolean,
+            required: false,
+            default: false,
+        },
         profile: {
             type: String,
             require: true,
