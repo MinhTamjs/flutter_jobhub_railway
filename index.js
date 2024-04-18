@@ -36,7 +36,7 @@ app.use("/api/applied", appliedRoute);
 
 
 //app.listen(process.env.PORT || 4000, () => console.log(`Example app listening on port ${process.env.PORT}!`));
-const ip = process.env.IP || "127.0.0.1";
+const ip = process.env.IP || "0.0.0.0";
 
 const port = process.env.PORT || 3000; 
 
