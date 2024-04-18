@@ -23,7 +23,7 @@ router.get("/skills", verifyTokenAndAuthorization, userController.getSkills);
 router.delete("/skills/:id", verifyTokenAndAuthorization, userController.deleteSkill);
 
 // GET ALL USER
-router.get("/", verifyTokenAndAdmin, userController.getAllUsers);
+router.get("/all", verifyTokenAndAdmin, userController.getAllUsers);
 
 // GET ALL AGENTS
 router.get("/agents", userController.getAgents);
