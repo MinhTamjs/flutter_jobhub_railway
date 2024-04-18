@@ -36,10 +36,23 @@ app.use("/api/applied", appliedRoute);
 
 
 //app.listen(process.env.PORT || 4000, () => console.log(`Example app listening on port ${process.env.PORT}!`));
-const ip = "0.0.0.0";
-const port = process.env.PORT || 3000; 
+// const ip = process.env.IP || "0.0.0.0";
+// const port = process.env.PORT || 3000; 
 
-app.listen(port, ip, () => {
-  console.log(`Product server listening on ${ip}:${port}`);
+// app.listen(port, ip, () => {
+//   console.log(`Product server listening on ${ip}:${port}`);
+// });
+
+
+const ip = process.env.IP || "127.0.0.1";
+const port = process.env.PORT || 3000;
+
+
+app.get('/', (req, res) => res.send('Hello'))
+// Listen only on the specified port on all network interfaces
+app.listen(port, () => {
+  console.log(`Server listening on http://localhost:${port}`);
+  console.log(`Server listening on ${ip}`);
 });
+
 
